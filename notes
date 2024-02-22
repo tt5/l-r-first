@@ -1,0 +1,14 @@
+cp ../.Rprofile .
+install.packages("remotes")
+remotes::install_github("rstudio/renv")
+renv::init()
+
+renv::status()
+renv::snapshot()
+renv::restore()
+
+renv::update()
+
+commit:
+renv.lock
+.Rprofile
